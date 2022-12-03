@@ -1,32 +1,36 @@
-# Variables of Resource Group for Storage Account
 variable "rg_name" {
-    description = "name of the resource group"
-    default = "Chvi-rg-sa"
+  description = "stoarge account's resource group name"
+  type = string
+  default = ""
+}
+
+variable "st_name" {
+  description = "name os storage account"
+  type = string
+  default = ""
 }
 
 variable "location" {
-    description = "name of the resource group"
-    default = "uksouth"
+    description =  "location of storage account"
+    type = string
+    default = ""  
 }
 
 variable "tags" {
-    description = "name of the resource group"
-    default = {
-        "env" = "QA"
-        "purpose" = "Testing"
+    description =  "tag of storage account"
+    type = map(string)
+    default = {      
     }
 }
 
-# Variables of Storage Account
-
-variable "sa_name" {
-    description = "name of the resource group"
-    default = "Chvistorage01"
+variable "account_tier" {
+    description =  "( 
+    type = string )"
+    default =  " Standard "
 }
 
-variable "sa_tags" {
-    description = "name of the resource group"
-    default = {
-        "purpose" = "Testing"
-    }
+variable "account_replication_type" {
+    description =  "replication "
+    type = string
+    default = "GRS"
 }
